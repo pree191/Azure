@@ -1,0 +1,104 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "location": {
+            "value": "eastus2"
+        },
+        "networkInterfaceName": {
+            "value": "windowsmain70"
+        },
+        "networkSecurityGroupName": {
+            "value": "WindowsMain-nsg"
+        },
+        "networkSecurityGroupRules": {
+            "value": []
+        },
+        "subnetName": {
+            "value": "default"
+        },
+        "virtualNetworkName": {
+            "value": "NewResourceGroup-vnet"
+        },
+        "addressPrefixes": {
+            "value": [
+                "10.2.0.0/24"
+            ]
+        },
+        "subnets": {
+            "value": [
+                {
+                    "name": "default",
+                    "properties": {
+                        "addressPrefix": "10.2.0.0/24"
+                    }
+                }
+            ]
+        },
+        "publicIpAddressName": {
+            "value": "WindowsMain-ip"
+        },
+        "publicIpAddressType": {
+            "value": "Dynamic"
+        },
+        "publicIpAddressSku": {
+            "value": "Basic"
+        },
+        "virtualMachineName": {
+            "value": "WindowsMain"
+        },
+        "virtualMachineRG": {
+            "value": "NewResourceGroup"
+        },
+        "osDiskType": {
+            "value": "StandardSSD_LRS"
+        },
+        "dataDisks": {
+            "value": [
+                {
+                    "lun": 0,
+                    "createOption": "attach",
+                    "caching": "ReadOnly",
+                    "writeAcceleratorEnabled": false,
+                    "id": null,
+                    "name": "WindowsMain_DataDisk_0",
+                    "storageAccountType": null,
+                    "diskSizeGB": null
+                }
+            ]
+        },
+        "dataDiskResources": {
+            "value": [
+                {
+                    "name": "WindowsMain_DataDisk_0",
+                    "diskSizeGB": 1023,
+                    "sku": "StandardSSD_LRS",
+                    "creationData": {
+                        "createOption": "empty"
+                    }
+                }
+            ]
+        },
+        "virtualMachineSize": {
+            "value": "Standard_DS1_v2"
+        },
+        "adminUsername": {
+            "value": "preepatel"
+        },
+        "adminPassword": {
+            "value": null
+        },
+        "diagnosticsStorageAccountName": {
+            "value": "newresourcegroupdiag980"
+        },
+        "diagnosticsStorageAccountId": {
+            "value": "Microsoft.Storage/storageAccounts/newresourcegroupdiag980"
+        },
+        "diagnosticsStorageAccountType": {
+            "value": "Standard_LRS"
+        },
+        "diagnosticsStorageAccountKind": {
+            "value": "Storage"
+        }
+    }
+}
